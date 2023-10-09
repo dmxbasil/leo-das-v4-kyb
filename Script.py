@@ -33,7 +33,7 @@ Here is the help for my COMMANDS."""
 - <a href=https://t.me/ame0451>ame</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and LazyPriness will respond whenever that keyword hits the message
+- Filter is the feature were users can set automated replies for a particular keyword and leo dad will respond whenever that keyword hits the message
 
 <b>NOTE:</b>
 1. BOT should have admin privillage.
@@ -82,7 +82,7 @@ Here is the help for my COMMANDS."""
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of ᴛᴏᴍ ᴄʀᴜɪꜱᴇ
+these are the extra features of leo das
 
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specified user.</code>
