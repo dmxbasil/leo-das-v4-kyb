@@ -46,11 +46,11 @@ async def rename_start(client, message):
             file = getattr(message, message.media.value)
             filesize = humanize.naturalsize(file.file_size) 
             filename = file.file_name
-            text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n\n**🎞File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`"""
-            buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="rename") ],
-                       [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
-                       [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
-                       [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
+            text = f"""\n• ʀᴇɴᴀᴍᴇ ᴍᴏᴅᴇ •\n\n**Please tell, what should i do with this file.?**\n\n**• ꜰɪʟᴇ ɴᴀᴍᴇ •** :- `{filename}`\n\n⚙️**• ꜰɪʟᴇ ꜱɪᴢᴇ •** :- `{filesize}`"""
+            buttons = [[ InlineKeyboardButton("• ꜱᴛᴀʀᴛ ʀᴇɴᴀᴍᴇ •", callback_data="rename") ],
+                       [ InlineKeyboardButton("• ɢᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
+                       [ InlineKeyboardButton("• ɢᴇɴᴇʀᴀᴛᴇ ʟɪɴᴋ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                       [ InlineKeyboardButton("• ᴄʟᴏꜱᴇ •", callback_data="cancel") ]]
             await message.reply_text(text=text, reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(buttons))
 
         elif message.from_user.id in LAZY_RENAMERS :
@@ -58,20 +58,20 @@ async def rename_start(client, message):
             filesize = humanize.naturalsize(file.file_size) 
             filename = file.file_name
             try:
-                text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n\n**🎞File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`"""
-                buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="rename") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
-                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
-                           [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
+                text = f"""\n• ʀᴇɴᴀᴍᴇ ᴍᴏᴅᴇ •\n\n**Please tell, what should i do with this file.?**\n\n**• ꜰɪʟᴇ ɴᴀᴍᴇ •** :- `{filename}`\n\n⚙️**• ꜰɪʟᴇ ꜱɪᴢᴇ •** :- `{filesize}`"""
+                buttons = [[ InlineKeyboardButton("• ꜱᴛᴀʀᴛ ʀᴇɴᴀᴍᴇ •", callback_data="rename") ],
+                           [ InlineKeyboardButton("• ɢᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
+                           [ InlineKeyboardButton("• ɢᴇɴᴇʀᴀᴛᴇ ʟɪɴᴋ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                           [ InlineKeyboardButton("• ᴄʟᴏꜱᴇ •", callback_data="cancel") ]]
                 await message.reply_text(text=text, reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(buttons))
                 await sleep(FLOOD)
             except FloodWait as e:
                 await sleep(e.value)
-                text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n\n**🎞File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`"""
-                buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="rename") ],
-                           [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
-                           [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
-                           [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
+                text = f"""\n• ʀᴇɴᴀᴍᴇ ᴍᴏᴅᴇ •\n\n**Please tell, what should i do with this file.?**\n\n**• ꜰɪʟᴇ ɴᴀᴍᴇ •** :- `{filename}`\n\n⚙️**• ꜰɪʟᴇ ꜱɪᴢᴇ •** :- `{filesize}`"""
+                buttons = [[ InlineKeyboardButton("• ꜱᴛᴀʀᴛ ʀᴇɴᴀᴍᴇ •", callback_data="rename") ],
+                           [ InlineKeyboardButton("• ɢᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazythumbnail") ],
+                           [ InlineKeyboardButton("• ɢᴇɴᴇʀᴀᴛᴇ ʟɪɴᴋ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="getlazylink") ],
+                           [ InlineKeyboardButton("• ᴄʟᴏꜱᴇ •", callback_data="cancel") ]]
                 await message.reply_text(text=text, reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(buttons))
             except:
                 pass
@@ -79,11 +79,11 @@ async def rename_start(client, message):
             file = getattr(message, message.media.value)
             filesize = humanize.naturalsize(file.file_size) 
             filename = file.file_name
-            text = f"""\n⨳ *•.¸♡ L҉ΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n**Please tell, what should i do with this file.?**\n\n**🎞File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`"""
-            buttons = [[ InlineKeyboardButton("📝✧✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧✧📝", callback_data="requireauth") ],
-                        [ InlineKeyboardButton("📸G͢e͢t͢ T͢h͢u͢m͢b͢n͢a͢i͢l͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazythumbnail") ],
-                        [ InlineKeyboardButton("🔏G͢e͢n͢e͢r͢a͢t͢e͢ L͢i͢n͢k͢ ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazylink") ],
-                        [ InlineKeyboardButton("⨳  C L Ф S Ξ  ⨳", callback_data="cancel") ]]
+            text = f"""\n• ʀᴇɴᴀᴍᴇ ᴍᴏᴅᴇ •\n\n**Please tell, what should i do with this file.?**\n\n**• ꜰɪʟᴇ ɴᴀᴍᴇ •** :- `{filename}`\n\n⚙️**• ꜰɪʟᴇ ꜱɪᴢᴇ •** :- `{filesize}`"""
+            buttons = [[ InlineKeyboardButton("• ꜱᴛᴀʀᴛ ʀᴇɴᴀᴍᴇ •", callback_data="requireauth") ],
+                        [ InlineKeyboardButton("• ɢᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazythumbnail") ],
+                        [ InlineKeyboardButton("• ɢᴇɴᴇʀᴀᴛᴇ ʟɪɴᴋ •ᶜᵒᵐⁱⁿᵍ ˢᵒᵒⁿ", callback_data="reqauthgetlazylink") ],
+                        [ InlineKeyboardButton("• ᴄʟᴏꜱᴇ •", callback_data="cancel") ]]
             await message.reply_text(text=text, reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(buttons))
     else:
         return
