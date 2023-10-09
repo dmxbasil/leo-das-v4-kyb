@@ -519,12 +519,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ʜᴇʀᴇ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+vTXulTvhb-YxOTg9')
+            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+U_BsDS31fbwwZjM1')
         ], [
             InlineKeyboardButton('⚠️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('⚙️ ᴀʙᴏᴜᴛ', callback_data='about')
         ],[
-            InlineKeyboardButton('• ᴀꜱᴋ ᴍᴏᴠɪᴇꜱ ʜᴇʀᴇ •', url='https://t.me/dmx_chating')
+            InlineKeyboardButton('🔄 ᴍʏ ᴍᴀɪɴ ɢʀᴏᴜᴘ 🔄', url='https://t.me/ckmovierequest')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -552,7 +552,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/+vTXulTvhb-YxOTg9'),
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs 📢', url='https://t.me/+U_BsDS31fbwwZjM1'),
             InlineKeyboardButton('sᴏᴜʀᴄᴇ 💡', callback_data='source')
         ], [
             InlineKeyboardButton('ʜᴏᴍᴇ 🔓', callback_data='start'),
@@ -852,7 +852,7 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 await client.send_message(req_channel,f"• #REQUESTED_CONTENT •\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                l = await message.reply_text(text=f"△ ʜᴇʏ ʙʀᴏ `{message.from_user.first_name}` 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : `{search}`\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : `{message.from_user.first_name}`\n\n༺ @dmx_chating",
+                l = await message.reply_text(text=f"△ ʜᴇʏ ʙʀᴏ `{message.from_user.first_name}` 😎,\n\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : `{search}`\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : `{message.from_user.first_name}`\n\n༺ @ckmovierequest",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("• ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ •", url=f'http://t.me/{temp.U_NAME}?startgroup=true')],[InlineKeyboardButton("• ᴄʜᴀɴɴᴇʟ •", url="https://t.me/+vTXulTvhb-YxOTg9"), InlineKeyboardButton("• ɢʀᴏᴜᴩ •", url="https://t.me/dmx_chating"), InlineKeyboardButton("•ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ •", url="https://t.me/+vTXulTvhb-YxOTg9")],[InlineKeyboardButton("• ᴄʟᴏꜱᴇ •", callback_data="close_data")]]))
                 await asyncio.sleep(60)
                 await l.delete()    
