@@ -68,13 +68,7 @@ async def start(client, message):
                 InlineKeyboardButton(
                     "📢 ᴜᴘᴅᴀᴛᴇs", url=invite_link.invite_link
                 )
-            ],
-             [
-                InlineKeyboardButton(
-                   "•🔄 ɢʀᴏᴜᴘ 🔄", url='https://t.me/ckmovierequest'
-                )
-            ]
-        ]
+            ]]
 
         if message.command[1] != "• ᴊᴏɪɴ ʜᴇʀᴇ •":
             try:
@@ -87,7 +81,7 @@ async def start(client, message):
             chat_id=message.from_user.id,
             text="**ᴩʟᴇᴀꜱᴇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ʙᴏᴛ**",
             reply_markup=InlineKeyboardMarkup(btn),
-            parse_mode=enums.ParseMode.MARKDOWN
+            parse_mode=enums.ParseMode.MAKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
