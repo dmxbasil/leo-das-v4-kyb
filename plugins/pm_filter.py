@@ -850,7 +850,7 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 await client.send_message(req_channel,f"• #REQUESTED_CONTENT •\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                l = await message.reply_text(text=f"ʜᴇʏ ʙʀᴏ ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ꜱᴩᴇʟʟɪɴɢ ɪꜱ ᴄᴏʀᴇᴇᴄᴛ / ᴍᴏᴠɪᴇ ʀᴇʟᴇᴀꜱᴇᴅ || ᴀɴᴅ ᴛʀʏ ᴛᴏ ᴀꜱᴋ ᴡɪᴛʜ ᴍᴏᴠɪᴇ ʏᴇᴀʀ ᴀʟꜱᴏ",)
+                l = await message.reply_text(text=f"ʜᴇʏ ʙʀᴏ ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ꜱᴩᴇʟʟɪɴɢ ɪꜱ ᴄᴏʀʀᴇᴄᴛ / ᴍᴏᴠɪᴇ ʀᴇʟᴇᴀꜱᴇᴅ || ᴀɴᴅ ᴛʀʏ ᴛᴏ ᴀꜱᴋ ᴡɪᴛʜ ᴍᴏᴠɪᴇ ʏᴇᴀʀ ᴀʟꜱᴏ",)
                                                                                                        
                 await asyncio.sleep(60)
                 await l.delete()    
