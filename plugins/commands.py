@@ -78,7 +78,7 @@ async def start(client, message):
                     
                 
             ]
-        ]
+        
 
         if message.command[1] != "subscribe":
             try:
