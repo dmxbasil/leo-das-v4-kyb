@@ -850,10 +850,7 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 await client.send_message(req_channel,f"• #REQUESTED_CONTENT •\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                l = await message.reply_text(text=f"ʜᴇʏ,
-ɪ ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ɪɴ ᴛʜᴀᴛ ɴᴀᴍᴇ. ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ꜱᴩᴇʟʟɪɴɢ ɪꜱ ᴄᴏʀʀᴇᴄᴛ, ᴍᴏᴠɪᴇ ɪs ʀᴇʟᴇᴀꜱᴇᴅ ᴀɴᴅ ᴛʀʏ ᴛᴏ ᴀꜱᴋ ᴡɪᴛʜ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴀʀ ᴀʟꜱᴏ.
-
-<a href=https://t.me/Cinema_Kottaaram>sᴇᴀʀᴄʜ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ɢʀᴏᴜᴘ.</a> 📡🙂",)
+                l = await message.reply_text(text=f"ʜᴇʏ,\nɪ ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ɪɴ ᴛʜᴀᴛ ɴᴀᴍᴇ. ᴍᴀᴋᴇ ꜱᴜʀᴇ ᴛʜᴀᴛ ʏᴏᴜʀ ꜱᴩᴇʟʟɪɴɢ ɪꜱ ᴄᴏʀʀᴇᴄᴛ, ᴍᴏᴠɪᴇ ɪs ʀᴇʟᴇᴀꜱᴇᴅ ᴀɴᴅ ᴛʀʏ ᴛᴏ ᴀꜱᴋ ᴡɪᴛʜ ʀᴇʟᴇᴀsᴇᴅ ʏᴇᴀʀ ᴀʟꜱᴏ.\n <a href=https://t.me/Cinema_Kottaaram>sᴇᴀʀᴄʜ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ɢʀᴏᴜᴘ.</a> 📡🙂",)
                                                                                                        
                 await asyncio.sleep(60)
                 await l.delete()    
